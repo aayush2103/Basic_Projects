@@ -1,0 +1,10 @@
+
+conference/.project
+conference/.classpath
+conference/.settings
+conference/target
+
+conference-xml/.classpath
+conference-xml/.project
+conference-xml/.settings
+conference-xml/target
