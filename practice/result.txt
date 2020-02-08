@@ -1,0 +1,3 @@
+English:65
+Maths:93
+Science:85

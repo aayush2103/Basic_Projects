@@ -1,0 +1,3 @@
+English:35
+Maths:48
+Science:45
