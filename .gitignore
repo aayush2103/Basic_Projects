@@ -4,6 +4,11 @@ conference/.classpath
 conference/.settings
 conference/target
 
+conference-Java/.classpath
+conference-Java/.project
+conference-Java/.settings
+conference-Java/target
+
 conference-xml/.classpath
 conference-xml/.project
 conference-xml/.settings
