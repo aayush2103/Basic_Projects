@@ -18,3 +18,8 @@ FitnessTracker/.classpath
 FitnessTracker/.project
 FitnessTracker/.settings
 FitnessTracker/target
+
+Servlet-Example/.classpath
+Servlet-Example/.project
+Servlet-Example/.settings
+Servlet-Example/build
