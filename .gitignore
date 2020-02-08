@@ -13,3 +13,8 @@ conference-xml/.classpath
 conference-xml/.project
 conference-xml/.settings
 conference-xml/target
+
+FitnessTracker/.classpath
+FitnessTracker/.project
+FitnessTracker/.settings
+FitnessTracker/target
