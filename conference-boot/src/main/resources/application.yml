@@ -1,0 +1,6 @@
+#Another file where you can define property values in spring-boot
+
+server:
+  port: 8180
+#Spring boot consisders 8080 as default port
+#To override it , we can specify port detail as shown above in yml or properties file or -Dserver.port=8180 in VM arguments
