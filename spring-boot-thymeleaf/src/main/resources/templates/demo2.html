@@ -23,5 +23,12 @@
     Request : <span th:text="${#httpServletRequest.getAttribute('request')}"></span><br/>
     Session : <span th:text="${session.session}"></span><br/>
     Application : <span th:text="${application.application}"></span><br/>
+
+    <h3>Thymeleaf URL</h3>
+    <!-- Redirect to demo page without parameter -->
+    <a th:href="@{~/demo}">Visit demo page</a><br/>
+    <!-- Redirect to demo page with parameter -->
+    <a th:href="@{~/demo(id=1, name=eric)}">Visit demo page with parameter</a>
+
 </body>
 </html>
