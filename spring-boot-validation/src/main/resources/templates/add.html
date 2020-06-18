@@ -12,7 +12,11 @@
         <span th:errors="${user.name}" style="color:red"></span><br/>
         Password : <input type="password" name="password">
         <span th:errors="${user.password}" style="color:red"></span><br/>
-        Grade : <input type="text" name="grade"><br/>
+        Grade : <input type="text" name="grade">
+        <span th:errors="${user.grade}" style="color:red"></span><br/>
+        Email : <input type="text" name="email">
+        <span th:errors="${user.email}" style="color:red"></span><br/>
+
         <input type="submit" value="Add">
     </form>
 
