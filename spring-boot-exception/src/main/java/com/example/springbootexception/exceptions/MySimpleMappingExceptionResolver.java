@@ -1,13 +1,8 @@
 package com.example.springbootexception.exceptions;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
-
-import java.util.Properties;
-
-@Configuration
+//@Configuration
 public class MySimpleMappingExceptionResolver {
+    /*
     @Bean
     public SimpleMappingExceptionResolver getSimpleMappingExceptionResolver(){
         SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
@@ -17,4 +12,5 @@ public class MySimpleMappingExceptionResolver {
         resolver.setExceptionMappings(mapping);
         return resolver;
     }
+    */
 }

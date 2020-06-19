@@ -1,8 +1,6 @@
 package com.example.springbootexception.exceptions;
 
-import org.springframework.web.bind.annotation.ControllerAdvice;
-
-@ControllerAdvice
+//@ControllerAdvice
 public class GlobalExceptionHandler {
     /*
     @ExceptionHandler(value={java.lang.ArithmeticException.class})
