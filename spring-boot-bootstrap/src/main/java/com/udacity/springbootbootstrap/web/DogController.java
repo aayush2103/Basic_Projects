@@ -1,6 +1,7 @@
 package com.udacity.springbootbootstrap.web;
 
 import com.udacity.springbootbootstrap.entity.Dog;
+import com.udacity.springbootbootstrap.service.DogNotFoundException;
 import com.udacity.springbootbootstrap.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class DogController {
@@ -33,10 +35,11 @@ public class DogController {
         return new ResponseEntity<List<String>>(dogBreedsList, HttpStatus.OK);
     }
 
-    @GetMapping("/dogs/breed/{id}")
-    public ResponseEntity<String> findBreedById(@PathVariable Long id){
-        String breedById = dogService.retrieveDogBreedById(id);
-        return new ResponseEntity<String>(breedById, HttpStatus.OK);
+    @GetMapping("/dogs/breeds/{id}")
+    public String findBreedById(@PathVariable Long id){
+        Optional<String> optionalBreed = Optional.ofNullable(dogService.retrieveDogBreedById(id));
+        String breedById = optionalBreed.orElseThrow(DogNotFoundException::new);
+        return breedById;
     }
 
     @GetMapping("/dogs/names")
