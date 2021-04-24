@@ -20,7 +20,6 @@ import java.util.List;
 public class CoronaVirusDataService {
 
     private static final String VIRUS_DATA_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
-
     private List<LocationStats> allStats = new ArrayList<>();
 
     public List<LocationStats> getAllStats() {
@@ -37,7 +36,6 @@ public class CoronaVirusDataService {
                 .build();
 
         HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        //System.out.println(httpResponse.body());
 
         StringReader csvBodyReader = new StringReader(httpResponse.body());
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvBodyReader);
@@ -46,7 +44,7 @@ public class CoronaVirusDataService {
             locationStat.setState(record.get("Province/State"));
             locationStat.setCountry(record.get("Country/Region"));
             locationStat.setLatestTotalCases(Integer.parseInt(record.get(record.size()-1)));
-            System.out.println(locationStat);
+
             newStats.add(locationStat);
         }
         allStats = newStats;
