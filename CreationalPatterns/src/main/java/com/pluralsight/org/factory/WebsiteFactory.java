@@ -2,12 +2,12 @@ package com.pluralsight.org.factory;
 
 public class WebsiteFactory {
 
-    public static Website getWebsite(String siteName) {
+    public static Website getWebsite(WebsiteType siteName) {
         switch(siteName) {
-            case "blog" : {
+            case BLOG : {
                 return new Blog();
             }
-            case "shop" : {
+            case SHOP : {
                 return new Shop();
             }
             default : {
