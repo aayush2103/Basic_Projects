@@ -9,7 +9,7 @@ public class EmployeeAdapterDap implements Employee {
     }
 
     @Override
-    public int getId() {
+    public String getId() {
         return this.instance.getCn();
     }
 

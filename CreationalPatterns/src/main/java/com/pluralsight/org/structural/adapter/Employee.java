@@ -2,7 +2,7 @@ package com.pluralsight.org.structural.adapter;
 
 public interface Employee {
 
-    int getId();
+    String getId();
     String getFirstName();
     String getLastName();
     String getEmail();
